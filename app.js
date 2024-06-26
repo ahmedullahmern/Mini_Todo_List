@@ -3,7 +3,10 @@ var list_item = document.getElementById("list_item")
 
 function yourtask() {
     console.log(userInput.value)
-    
+    if(userInput.value === "") {
+        alert("Add Your Task");
+        return; 
+    }
     var li1 = `<li><span>${userInput.value}</span>
     <button id="del"  onclick="deletechal(this)">Del</button>
     <button id="edit"  onclick="editchal(this)">Edit</button>
